@@ -14,7 +14,7 @@ const sessions = {};
 // Start WhatsApp connection for a specific user ID
 async function startWhatsApp(userId) {
     console.log(`Starting WhatsApp session for user: ${userId}`);
-    const { state, saveCreds } = await useMultiFileAuthState(`auth_info_baileys/${userId}`);
+    const { state, saveCreds } = await useMultiFileAuthState(`.data/auth_info_baileys/${userId}`);
     
     sessions[userId] = { status: 'initializing', qr: null, sock: null };
 
